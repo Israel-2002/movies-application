@@ -1,0 +1,21 @@
+.genres {
+  &__select {
+    padding: 1rem;
+    cursor: pointer;
+    background-color: $color-blue;
+    color: $color-white;
+    border-radius: 3px;
+    margin-bottom: 4rem;
+    position: sticky;
+    top: 1rem;
+    z-index: 998; 
+
+    @include breakpoint(tablet) {
+      top: 2rem;
+    }
+
+    @include breakpoint(laptop) {
+      top: 3rem;
+    }
+  }
+}

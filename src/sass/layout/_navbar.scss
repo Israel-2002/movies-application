@@ -1,0 +1,131 @@
+.navbar {
+  background: $color-blue--dark;
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 2rem;
+
+  @include breakpoint(laptop) {
+    padding-block: 2.5%;
+  }
+
+  &__logo {
+    &-orange {
+      background: linear-gradient(
+        to right,
+        $color-orange,
+        $color-orange--light
+      );
+      padding: 0.3rem;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 3px;
+    }
+    &-blue {
+      background: linear-gradient(to right, $color-blue, $color-blue--light);
+      padding: 0.15rem;
+      border-radius: 0 3px 3px 0;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(laptop) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__links-container {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: $color-blue;
+    display: grid;
+    place-items: center;
+    transition: 300ms ease-in-out;
+    z-index: 999;
+
+    @include breakpoint(tablet) {
+      width: 70%;
+    }
+
+    @include breakpoint(laptop) {
+      position: static;
+      height: auto;
+      width: fit-content;
+      background-color: transparent;
+    }
+  }
+
+  &__links {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-size: 1.125rem;
+
+    @include breakpoint(laptop) {
+      text-align: left;
+      flex-direction: row;
+      font-size: 1rem;
+    }
+
+    & li a.active,
+    & li a:hover {
+      border-bottom: 1px solid $color-white;
+    }
+  }
+
+  &__open {
+    font-size: 1.4rem;
+  }
+
+  &__close {
+    position: absolute;
+    top: 2.3rem;
+    right: 5%;
+    font-size: 1.7rem;
+  }
+
+  &__open,
+  &__close {
+    @include breakpoint(laptop) {
+      display: none;
+    }
+  }
+
+  &__search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    max-width: 900px;
+    margin-inline: auto;
+
+    & input {
+      width: 100%;
+      padding: 0.3rem;
+      border-radius: 3px;
+
+      @include breakpoint(tablet) {
+        padding: 0.5rem;
+      }
+
+      @include breakpoint(laptop) {
+        padding: 0.7rem;
+      }
+    }
+
+    &-btn {
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap");
+
+@font-face {
+  font-family: "Satoshi";
+  src: url(/src/assets/fonts/satoshi/Satoshi-Regular.otf);
+}
+
+.navbar__logo {
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  color: white;
+}
+
+body,
+input,
+select {
+  font-family: "Satoshi", sans-serif;
+}

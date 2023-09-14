@@ -1,0 +1,95 @@
+.footer {
+  background-color: $color-black;
+  color: #aaa;
+  padding-block: 1rem;
+
+  @media (min-width: 480px) {
+    padding-block: 2rem;
+  }
+
+  @include breakpoint(laptop) {
+    padding-block: 2.5rem;
+  }
+
+  @include breakpoint(laptop) {
+    padding-block: 4rem;
+  }
+
+  &__container {
+    display: grid;
+    gap: 1.25rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr 2.5fr 1.5fr;
+    }
+  }
+
+  &__logo {
+    color: $color-white;
+    font-size: 34px;
+    display: none;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+
+    @include breakpoint(laptop) {
+      display: block;
+    }
+
+    &-orange {
+      background: linear-gradient(
+        to right,
+        $color-orange,
+        $color-orange--light
+      );
+      padding: 0.3rem;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 3px;
+    }
+    &-blue {
+      background: linear-gradient(to right, $color-blue, $color-blue--light);
+      padding: 0.15rem;
+      border-radius: 0 3px 3px 0;
+    }
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    @include breakpoint(laptop) {
+      //   flex-direction: row;
+      //   gap: 2rem;
+    }
+
+    & p {
+      //   max-width: 600px;
+    }
+  }
+
+  &__links {
+    color: $color-white;
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__right {
+    border: 1px solid #aaa;
+    padding: 0.7rem;
+    position: relative;
+    align-self: self-start;
+    max-width: 600px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      border-radius: 50%;
+    }
+  }
+}

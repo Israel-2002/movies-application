@@ -1,0 +1,39 @@
+.searched {
+  &__navbar {
+    margin-bottom: 2rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(laptop) {
+      margin-bottom: 3rem;
+    }
+
+    & ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      & li {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+
+        & a {
+          background-color: $color-gray--light;
+          padding: 0.6rem;
+          display: inline-flex;
+          align-items: center;
+          gap: .3rem;
+
+          &.active {
+            border-radius: 3px;
+            background-color: $color-blue;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}

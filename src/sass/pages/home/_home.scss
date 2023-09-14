@@ -1,0 +1,53 @@
+.home {
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(laptop) {
+      margin-bottom: 3rem;
+    }
+
+    & h2 {
+      display: none;
+      margin-bottom: 0;
+
+      @include breakpoint(tablet) {
+        display: block;
+      }
+    }
+  }
+
+  &__navbar {
+    height: 100%;
+
+    & ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      & li {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        background-color: $color-gray--light;
+        padding: 0.6rem;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    }
+
+    &-icon {
+      display: none;
+
+      @include breakpoint(tablet) {
+        display: inline-block;
+      }
+    }
+  }
+}

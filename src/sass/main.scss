@@ -1,0 +1,16 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/reset";
+@import "base/typography";
+
+@import "components/buttons";
+
+@import "layout/navbar";
+@import "layout/footer";
+
+@import 'pages/home/home';
+@import 'pages/details/details';
+@import 'pages/searched/searched';
+@import 'pages/genres/genres';
